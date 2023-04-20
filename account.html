@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Account | Bonsai Nation</title>
+		<!--Favicon-->
+		<link rel="icon" type="image/x-icon" href="images/logo.jpeg">
+		<meta name="description" content="Account in Bonsai Nation">
+		<meta name="keywords" content="Bonsai Nation, Account, Plant, Ecommerce Website">
+		<meta name="author" content="Nirvic Regmi, Janaral Novelraj Koirala, Atal Gyawali, Nirjal Byanjakar, Prasidhha Bikram KC">
+		<!--Linking to external css-->
+		<link rel="stylesheet" href="style.css">
+		
+		
+		<style type="text/css">
+
+			/*Login form*/
+			.one
+			{
+				background-image: url(images/accountbg.webp);
+				width: 350px;
+				margin: auto;  
+				padding: 20px;
+			}
+
+			/* Button used to open the contact form - fixed at the bottom of the page */
+			.open-button 
+			{
+				background-color: #555;
+				color: white;
+				padding: 16px 20px;
+				border: none;
+				cursor: pointer;
+				position: fixed;
+				bottom: 15px;
+				right: 28px;
+				width: 280px;
+			}
+
+			/* The popup form - hidden by default */
+			.form-popup 
+			{
+				display: none;
+				position: fixed;
+				bottom: 0;
+				right: 15px;
+				border: 3px solid lightgreen;
+				z-index: 1; /*z index defines stack order*/
+			}
+
+			/* Add styles to the form container */
+			.form-container 
+			{
+				max-width: 300px;
+				padding: 10px;
+				background-color: white;
+			}
+
+			/* Full-width input fields */
+			.form-container input[type=text], .form-container textarea
+			{
+				width: 100%;
+				padding: 15px;
+				margin: 5px 0 22px 0;
+				border: none;
+				background: #f1f1f1;
+			}
+
+
+			/* Set a style for the submit*/
+			.form-container .btn
+			{
+				background-color: grey;
+				color: white;
+				padding: 16px 20px;
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				margin-bottom:10px;
+				opacity: 0.8; /*Transperancy*/
+			}
+
+			/* Add a red background color to the cancel button */
+			.form-container .cancel 
+			{
+				background-color: red;
+			}
+
+			/* Add some hover effects to buttons */
+			.form-container .btn:hover, .open-button:hover 
+			{
+				opacity: 1; /*Transperancy*/
+			}
+
+			/*Register account*/
+			.one
+			{
+				background-color: #e8dfe7;
+				width: 350px;
+				margin: auto;
+				padding: 20px;
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		<!--Navigation bar-->
+		<div class="header">
+			<div class="box">
+				<div class="navbar">
+					<div class="icon">
+						<a href="index.html"><img src="images/logo.jpeg" alt="Website logo" width="125px"></a>
+					</div>
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="product.html">Products</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="account.html" class="active">Account</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<br><br> <!--Line Break-->
+			
+			
+		<h3 style="color: #555" text align="center">Welcome To Bonsai Nation! Please Login.</h3><br>
+		<div class="one">
+			<!--Execute FormValidate() function when form is submitted-->
+			<form onsubmit="FormValidate()" name="account">
+				Email: <br>
+				<input type="Email" name="email" placeholder="domainname@gmail.com"> <br><br>
+				Password: <br>
+				<input type="Password" name="password"><br><br>
+				<input type="submit" name="Submit"><br><br>
+			</form>
+		</div>
+
+		<br>
+
+		<div align="center">	
+			<p>Not registered yet? Register your account below.</p>
+		</div><br><br><br>
+
+		<h3 style="color: #555" text align="center">CREATE YOUR ACCOUNT</h3><br>
+		<div class="one">
+			<form onsubmit="Validation()" name="register"> <!--when submit button is clicked validation function is triggered-->
+				First Name <br>
+				<input type="text" name="fname"><br><br>
+				Last Name <br>
+				<input type="text" name="lname"><br><br>
+				Email <br>
+				<input type="Email" name="email" placeholder="domainname@gmail.com"><br><br>
+				Password <br>
+				<input type="Password" name="password"><br><br>
+				Phone Number <br>
+				<!--Creating a drop down list and adding options-->
+				<select>
+					<!--Options in drop down list-->
+					<option value="+977">+977</option>
+					<option value="+91">+91</option>
+				</select>
+				<input type="tel" name="phonenumber"><br><br>
+					
+				Gender: <input type="radio" name="gender" value="male" checked> Male <input type="radio" name="gender" value="female"> Female <br>   <br>
+
+				<input type="submit" name="Create Account"><br><br>
+			</form>
+		</div>
+
+
+
+		<!--Division for button to open feedback form. When button is clicked openForm() function is executed.-->
+		<button class="open-button" onclick="openForm()">Feedback Form</button>
+		<!--Division for feedback form-->
+		<div class="form-popup" id="myForm">
+			<form class="form-container" onsubmit="send()" name="feedback">
+				<!--Emphasized text tag-->
+				<em>We appreciate your feedback</em><br><br> 
+			
+				<label for="email"><b>Email</b></label>
+				<input type="text" placeholder="Enter Email" name="email" >
+ 
+				<b>Feedback</b><br>
+				<textarea rows="5" cols="10" name="feedback" placeholder="Enter you message..." ></textarea>
+					
+				<!--Button to submit form-->
+				<button type="submit" class="btn">Submit</button>
+				<!--Button to close form-->
+				<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+			</form>
+		</div>
+			
+		<!--Footer tag-->
+		<div class="footer">
+			<a href="aboutus.html"><h4>About Us</h4></a>
+			<marquee><p>@copyright BonsaiNation 2023- All Right Reserved.</p></marquee>
+		</div>
+
+		<!--Linking to external js, myScript.js-->
+		<script type="text/javascript" src="myScript.js"></script>
+	</body>
+</html>

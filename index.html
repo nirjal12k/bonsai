@@ -1,0 +1,500 @@
+<!DOCTYPE html> <!--doctype refers to version 5 of html-->
+<html>
+    <head>
+        <meta name="description" content="Account in Bonsai Nation">
+	    <meta name="keywords" content="Bonsai Nation, Account, Plant, Ecommerce Website">
+	    <meta name="author" content="Nirvic Regmi, Janaral Novelraj Koirala, Atal Gyawali, Nirjal Byanjakar, Prasidhha Bikram KC">
+        
+        <title>Home | BonsaiNation</title>
+        <!--Favicon-->
+        <link rel="icon" type="image/x-icon" href="images/logo.jpeg">
+        <!--Linking with style.css-->
+        <link rel="stylesheet" href="style.css">
+        
+        <style type="text/css">
+
+            /*Styling header with background image*/
+            .header
+            {
+                background-image: url(images/indexbg.jpg); /*Sets background image in header*/
+            }
+
+            p
+            {
+                color: #555; /*Color of the text*/
+            }
+            
+            /*Styling column-1 and column-2 classes*/
+            .column-1 .column-2
+            {
+                flex-basis: 50%; /*flex-basis sets the size of flex item*/
+                min-width: 300px;
+            }
+
+            /*Styling image in column-2 class*/
+            .column-2 img
+            {
+                 padding: 50px 0;
+            }
+
+            /*Styling h1 in column-1 class*/
+            .column-1 h1
+            {
+                font-size: 40px; /*size of text of h1 in column-1 class*/
+                line-height: 60px;
+                margin: 25px 0;
+            }
+
+            /*Styling button*/
+            .button
+            {
+                display: inline-block; /*displays item horizontally*/
+                background: #97ded9; /**/
+                color: white-space; /*Color of text*/
+                padding: 8px 30px; /*Create space inside border .Top padding is 8px and right padding is 30px.*/
+                margin: 30px 0; /*create space outside border. Top margin is 30px and right marigin is 0*/
+                border-radius: 30px; /*Border-radius is used for rounded corners*/
+            }
+
+            .button:hover /*Implemented when mouse is hover on button*/
+            {
+                background: #e84f57; /*background color*/
+            }
+            
+            
+            .header .row
+            {
+                margin-top: 70px;
+            }
+
+            .categories
+            {
+                margin: 70px 0;
+            }
+
+            .column
+            {
+                flex-basis: 30%;
+                min-width: 250px;
+                margin-bottom: 30px;
+            }
+
+            /*Styling image in column class*/
+            .column img
+            {
+                width: 100%;
+            }
+            
+
+            h4
+            {
+                color: #555;
+                font-weight: normal; /*Font-weight defines how bolder or lighter the text will appear*/
+                text-align: center; /*Aligns text in center*/
+            }
+            
+            /*Hover effect on column-3*/
+            .column-3:hover
+            {
+                transform: translateY(-5px); /*Applies -5px 2D movement in y-axis*/
+            }
+
+            /*styling discount offer*/
+            #banner
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-image: url(images/blogbg.png);
+                width: 100%;
+                height: 40vh;
+                background-size: cover;
+                background-position: center;
+            }
+
+            /*Styling h4 tag in discount offer*/
+            #banner h4
+            {
+                font-size: 16px;
+            }
+
+            /*Styling button in discount section*/
+            button.discount
+            {
+                font-size: 14px;
+                font-weight: 600;
+                padding: 15px 30px;
+                border-radius: 4px;
+                background-color: white;
+                cursor: pointer; /*mouse pointer is displayed when hovered on button*/
+                border: none; /*no border*/
+                outline: none; /*outline is line drawn outside border. Here there is no outline*/
+                transition: 0.2s; /*Change property value smoothly for 0.2 seconds*/
+            }
+
+            #banner button:hover /*When mouse is hovered on button in discount section*/
+            {
+                background-color: green; /*After hovering background color of the button will be green*/
+            }
+
+            /*Styling paragraph inside column-3 class*/ 
+            .column-3 p
+            {
+                font-size: 14px;
+                text-align: center;
+            }
+
+
+            .description
+            {
+                display: flex; 
+            }
+
+            .webpages
+            {
+                position: relative; /*popsitioned relative to its normal position*/
+                width: 100%;
+                
+            }
+
+            
+            .texts
+            {
+                font-family: monospace; /*mponospace font*/
+                font-size: 20px;
+            }
+
+            .overlay
+            {
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                right: 0;
+                background-color: #008CBA;
+                overflow: hidden; /*Overflow is clipped and contents will be invisible*/
+                width: 100%;
+                height:0;
+                transition: .5s ease; /*changes property values smoothly for 0.5s*/
+            }
+
+            .webpages:hover .overlay
+            {
+                bottom: 0;
+                height: 100%;
+            }
+
+            .texts
+            {
+                color: white; /*color of text is white*/
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);  /*2D transformation*/
+                text-align: center;
+            }
+
+            .image 
+            {
+                display: block; /*It cannot have other block elements inside it*/
+                width: 100%;
+                height: 200px;
+            }
+
+            .col-1
+            {
+                flex: 30%; /*Flexing 30%(width)*/
+            }
+
+            
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <!--Division for Navigation bar, Writing some texts and a image-->
+            <div class="box">
+                <!--Division for navigation bar-->
+                <div class="navbar">
+                    
+                    <!--Division for Website Logo in navigation bar-->
+                    <div class="icon">
+                        <a href="index.html"> <img src="images/logo.jpeg" alt="Website logo" width="125px">  </a>
+                    </div>
+                    <nav>
+                        <!--Using unordered list in navigation bar-->
+                        <ul>
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="product.html">Products</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="account.html">Account</a></li>
+                        </ul>
+                    </nav>
+
+                
+                </div>
+
+                <!--Division for Writing Text and Inserting a image-->
+                <div class="row">
+                    <!--Division for Writing text and add button that links to product page-->
+                    <div class="column-1">
+                        <h1>Beauty Within A Confined Space!</h1>
+                        <p>The object is not to make the tree look like a bonsai, <br> but to make the bonsai look like a tree.</p>
+                        <a href="product.html" class="button">All Products &#9755;</a> 
+
+                    </div>
+
+                    <!--Division for image slider-->
+                    <div class="slider">
+                        <div class="column-2" id="img">
+                            <img src="images/homepic.jpg" alt="Bonsai Plant Picture">
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+     </div>
+
+        
+    
+        <!--Wrapper-->
+        <div class="categories">
+            <div class="innercategories">
+                <!--Division for a row which has three column-->
+                <div class="row">
+                    <!--Division for column which has 30% flex basis-->
+                    <div class="column">
+                        <img src="images/beauty.jpg" height="200px">
+                    </div>
+                    <!--Division for column which has 30% flex basis-->
+                    <div class="column">
+                        <img src="images/chinese.jpg" height="200px">
+                    </div>
+                    <!--Division for column which has 30% flex basis-->
+                    <div class="column">
+                        <img src="images/japanese.jpg" height="200px">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!--division for adding featured products-->
+        <div class="innercategories">
+            <h2 style="text-align: center; color: #555;">Featured Products</h2>
+            <!--Division for row that is flexible-->
+            <div class="row">
+                <!--Division for column having 25% flex basis-->
+                <div class="column-3">
+                    <img src="images/featured1.jpg" alt="first featured product">
+                    <h4>Green Ficus Bonsai</h4>
+                    <p>Rs 200</p>
+            
+                </div>
+                <!--Division for column having 25% flex basis-->
+                <div class="column-3">
+                    <img src="images/featured2.jpg" alt="second featured product">
+                    <h4>Green Paradise</h4>
+                    <p>Rs 600</p>
+            
+                </div>
+                <!--Division for column having 25% flex basis-->
+                <div class="column-3">
+                    <img src="images/featured3.jpg" alt="third featured product">
+                    <h4>Banyan Bonsai Tree</h4>
+                    <p>Rs 32000</p>
+            
+                </div>
+                <!--Division for column having 25% flex basis-->
+                <div class="column-3">
+                    <img src="images/featured4.jpg" alt="fourth featured product">
+                    <h4>Chinese Orange Plant</h4>
+                    <p>Rs 99</p>
+            
+                </div>
+            </div>
+            <!--New Products-->
+            <h2 style="text-align: center; color: #555;">New Products</h2>
+
+            <!--Division for new products-->
+            <div class="row">
+                <!--Division for column having 25% flex basis-->
+                <div class="column-3">
+                    <img src="images/new1.webp" alt="first new product">
+                    <h4>Snake Plant</h4>
+                    <p>Rs 199</p>
+            
+                </div>
+                <!--Division for column having 25% flex basis-->
+                <div class="column-3">
+                    <img src="images/new2.webp" alt="second new product">
+                    <h4>Apple Bonsai Plant</h4>
+                    <p>Rs 500</p>
+            
+                </div>
+                <!--Division for column having 25% flex basis-->
+                <div class="column-3">
+                    <img src="images/new3.jpg" alt="third new product">
+                    <h4>Fern Plant</h4>
+                    <p>Rs 399</p>
+            
+                </div>
+                <!--Division for column having 25% flex basis-->
+                <div class="column-3">
+                    <img src="images/new4.jpg" alt="fourth new product">
+                    <h4>Apricot Bonsai</h4>
+                    <p>Rs 999</p>
+            
+                </div>
+                <div class="row">
+                    <!--Division for column having 25% flex basis-->
+                    <div class="column-3">
+                        <img src="images/featured1.jpg" alt="first featured product">
+                        <h4>Green Ficus Bonsai</h4>
+                        <p>Rs 200</p>
+                
+                    </div>
+                    <!--Division for column having 25% flex basis-->
+                    <div class="column-3">
+                        <img src="images/featured2.jpg" alt="second featured product">
+                        <h4>Green Paradise</h4>
+                        <p>Rs 600</p>
+                
+                    </div>
+                    <!--Division for column having 25% flex basis-->
+                    <div class="column-3">
+                        <img src="images/featured3.jpg" alt="third featured product">
+                        <h4>Banyan Bonsai Tree</h4>
+                        <p>Rs 32000</p>
+                
+                    </div>
+                    <!--Division for column having 25% flex basis-->
+                    <div class="column-3">
+                        <img src="images/featured4.jpg" alt="fourth featured product">
+                        <h4>Chinese Orange Plant</h4>
+                        <p>Rs 99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Section tag used for discount-->
+        <section id="banner" class="discount">
+            <h3>Exclusive Discount</h3>
+            <h2>Upto <span style="color: red;">60% Off</span> - New Year Special</h2>
+            <a href="product.html"><button class="discount">More Products</button></a>
+        </section><br><br>
+
+        <!--Division for dots-->
+        <div style="text-align: center;">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div><br><br>
+
+
+        
+        <!--Wrapper-->
+        <div class="description">
+            <!--Col-1 division has 3 flexible items.-->
+            <div class="col-1">
+                <!--Division to show image and details about webpage-->
+                <div class="webpages">  
+                    <img src="images/homepage.jfif" class="image" alt="Home Page image">
+                    <!--Wrapper for texts class-->
+                    <div class="overlay">
+                        <!--Division that shows details about webpages-->
+                        <div class="texts">See featured products and fresh new products with heavy discounts.</div>
+                    </div>
+                </div>
+                <!--Division to show image and details about webpage-->
+                <div class="webpages">  
+                    <img src="images/productpage .jpg" class="image" alt="Product Page image">
+                    <!--Wrapper for texts class-->
+                    <div class="overlay">
+                        <!--Division that shows details about webpages-->
+                        <div class="texts">Showcases the wide selection of products that the company offers and has brief description about product details.</div>
+                    </div>
+                </div>
+                <!--Division to show image and details about webpage-->
+                <div class="webpages">  
+                    <img src="images/blogpage.jpg" class="image" alt="Blog Page image">
+                    <!--Wrapper for texts class-->
+                    <div class="overlay">
+                        <!--Division that shows details about webpages-->
+                        <div class="texts">Includes brief description about bonsai plants and technologies and the impact of bonsai plants in daily lives.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Col-1 division has 3 flexible items.-->
+            <div class="col-1">
+                <!--Division to show image and details about webpage-->
+                <div class="webpages">  
+                    <img src="images/researchpage.jpg" class="image" alt="Research Page ">
+                    <!--Wrapper for texts class-->
+                    <div class="overlay">
+                        <!--Division that shows details about webpages-->
+                        <div class="texts">Includes different webpages that were taken as reference while building the website.</div>
+                    </div>
+                </div>
+                <!--Division to show image and details about webpage-->
+                <div class="webpages">  
+                    <img src="images/aboutuspage.jpg" class="image">
+                    <!--Wrapper for texts class-->
+                    <div class="overlay">
+                        <!--Division that shows details about webpages-->
+                        <div class="texts">Portfolio of our team members and CV.</div>
+                    </div>
+                </div>
+                <!--Division to show image and details about webpage-->
+                <div class="webpages">  
+                    <img src="images/accountpage.jpg" class="image">
+                    <!--Wrapper for texts class-->
+                    <div class="overlay">
+                        <!--Division that shows details about webpages-->
+                        <div class="texts">Login to BonsaiNation account or create an account.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            /*Image slider*/
+            var images = ['images/a.jpg', 'images/b.jpg', 'images/c.jpg', 'images/homepic.jpg'];
+            var x = 0;
+            var imgs = document.getElementById('img');
+            //The setInterval() calls a function at the intervals (in milliseconds). 
+            setInterval(slider, 2000);
+            function slider()
+            {
+                if (x<images.length){
+                    x = x+1;
+                }
+                else{
+                    x=1;
+                }
+                imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+            }
+        </script>
+
+        <!--Footer tag-->
+        <div class="footer">
+            <a href="aboutus.html"><h4>About Us</h4></a>
+            <!--Marquee tag is used for moving texts-->
+            <marquee>
+                <p>@copyright BonsaiNation 2023- All Right Reserved.</p>
+            </marquee> 
+        </div>
+    </body>
+</html>

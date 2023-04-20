@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Products | Bonsai Nation </title>
+		<!--Favicon-->
+		<link rel="icon" type="image/x-icon" href="images/logo.jpeg">
+		<meta name="description" content="Account in Bonsai Nation">
+		<meta name="keywords" content="Bonsai Nation, Account, Plant, Ecommerce Website">
+		<meta name="author" content="Nirvic Regmi, Janaral Novelraj Koirala, Atal Gyawali, Nirjal Byanjakar, Prasidhha Bikram KC">
+
+		<link rel="stylesheet" href="style.css"> 
+		<style type="text/css">
+		
+			.img-container
+			{
+				background-image: url(images/bgg.jpg); /*Background image*/
+				background-size: cover; /*background image covers the whole page*/
+				position: relative; /*positioned relative to its normal position*/
+				height: 800px;
+			}
+
+			.text
+			{
+				background-color: #e6f2e9;
+				color: black; /*text color is black*/
+				font-size: 120px; 
+				margin: auto; /*horizontally centers elements*/
+				padding: 15px;
+				width: 60%;
+				font-weight: bold; /*font is bold*/
+				text-align: center;
+				position: absolute; 
+				top: 50%; 
+				left: 50%;
+				transform: translate(-50%, -50%); /*2D transformation*/
+			}
+			
+			/*Styling button*/
+			button
+			{
+				border: none;
+				border-radius: 20px; /*rounded border*/
+				outline: 0;
+				padding: 12px;
+				color: black;
+				background-color: greenyellow;
+				text-align: center;
+				cursor: pointer;
+				width: 100%;
+				font-size: 18px;
+			}
+			
+			/*Hover effect on button*/
+			button:hover 
+			{
+				opacity: 0.7; /*Transperancy*/
+			}
+
+
+			.firstcolumn
+			{
+				flex: 30%; /*first column occupies 30% width*/
+				background-color: #f7efed;
+				margin: 20px;
+			}
+
+			.secondcolumn
+			{
+				flex: 30%; /*second column occupies 30% width*/
+				background-color: #f7efed;
+				margin: 20px;
+			}
+
+			.thirdcolumn
+			{
+				flex: 30%; /*third column occupies 30% width*/
+				background-color: #f7efed;
+				margin: 20px;
+			}
+
+			h2
+			{
+				text-align: center;
+			}
+
+			
+			.notify 
+			{
+				background-color: grey;
+				color: white;
+				padding: 22px 20px;
+				position: absolute;
+				display: inline-block; /*Rounded corners*/
+				border-radius: 2px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				right: 28px; /*sets the right edge of an element 28px to the right of the right edge*/
+				cursor: pointer;
+			}
+
+			.notify:hover
+			{
+				background: black; /*when hovered background color becomes black*/
+			}
+
+			.notify .badge
+			{
+				position: absolute;
+				top: -10px;
+				right: -10px;
+				padding: 5px 10px;
+				border-radius: 50%;
+				background-color: red;
+				color: white;
+			}
+
+			
+			
+			.column-3 p
+			{
+				font-size: 15px;
+				text-align: center;
+			}
+
+			h4
+			{
+				font-weight: bold;
+				text-align: center;
+				font-size: 22px;
+			}
+
+			h3
+			{
+				text-align: center;
+				font-weight: lighter; /*Lighter font*/
+
+			}
+
+			/*Read more in products*/
+			#more, #more1, #more2, #more3, #more4, #more5, #more6, #more7 
+			{
+				display: none;
+			}
+		</style>	
+	</head>
+	<body>
+	
+		<div class="header">
+				<div class="box">
+					<div class="navbar">
+						<div class="icon">
+							<a href="index.html"><img src="images/logo.jpeg" alt="Website logo" width="125px"></a>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="product.html" class="active">Products</a></li>
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="research.html">Research</a></li>
+								<li><a href="aboutus.html">About Us</a></li>
+								<li><a href="account.html">Account</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+		</div>
+
+		<!--Inbox notification-->
+		<div class="notify" onclick="inbox()">
+			<span style="font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Inbox</span>
+			<span class="badge">0</span>
+		</div>
+
+		<h1 style="text-align: center;">Our Products</h1><br><br>
+		
+		<!--Division for background image-->
+		<div class="img-container">
+			<!--Division for writing text above background image-->
+			<div class="text">
+				OUR PRODUCTS
+			</div>
+		</div><br><br>
+
+		
+		<!--Greeting according to time-->
+		<h2 id="greet" class="pro"></h3><br><br><br> 
+			
+		<h2 class="pro">Please Check Our Products</h2>
+
+		
+
+		<!--All products-->
+		<div class="innercategories">
+			<!--First row-->
+			<div class="row">
+				<!--First column-->
+				<div class="column-3">
+					<img src="images/featured1.jpg" alt="first featured product">
+					<h4>Green Ficus Bonsai</h4>
+					<h3><del>Rs 200</del></h3> <h3>Rs 150</h3>
+					<p>Green Fibcus bonsai is one the most popular bonsai<span id="dots">...</span><span id="more"> which are very suitable for indoor cultivation. <button onclick="cart()">Add to Cart</button></span></p>
+					<p onclick="myFunction()" id="myBtn" style="cursor: pointer;">More</p>
+			
+				</div>
+
+				<!--Second column-->
+				<div class="column-3">
+					<img src="images/featured2.jpg" alt="first featured product">
+					<h4>Green Paradise</h4>
+					<h3><del>Rs 600</del></h3> <h3>Rs 550</h3>
+					<p>Green Paradise is indoor and outdoor goodluck money<span id="dots1">...</span><span id="more1"> money tree. It has 6 inch bonsai pot. <button onclick="cart()">Add to Cart</button></span></p>
+					<p onclick="myFunction1()" id="myBtn1" style="cursor: pointer;">More</p>
+				</div>
+
+				<!--Third column-->
+				<div class="column-3">
+					<img src="images/new1.webp" alt="first featured product">
+					<h4>Snake Plant</h4>
+					<h3>Rs 199</h3>
+					<p>Snake plant has unique air purifying qualities and can<span id="dots2">...</span><span id="more2"> add lot of freshness in the environment. <button onclick="cart()">Add to Cart</button></span></p>
+					<p onclick="myFunction2()" id="myBtn2" style="cursor: pointer;">More</p>
+				</div>
+
+				<!--Fourth column-->
+				<div class="column-3">
+					<img src="images/new2.webp" alt="first featured product">
+					<h4>Apple Bonsai Plant</h4>
+					<h3>Rs 200</h3>
+					<p>Apple Bonsai Plant comes with small to medium sized<span id="dots3">...</span><span id="more3"> pot. Place it in a warm environment. <button onclick="cart()">Add to Cart</button></span></p>
+					<p onclick="myFunction3()" id="myBtn3" style="cursor: pointer;">More</p>
+			
+				</div>
+			</div>
+
+			<!--Second row-->
+			<div class="row">
+				<!--First column-->
+				<div class="column-3">
+					<img src="images/new3.jpg" alt="first featured product">
+					<h4>Fern Plant</h4>
+					<h3>Rs 399</h3>
+					<p>Remember to keep your Fern Plant on sunlight for<span id="dots4">...</span><span id="more4"> 6 to 8 hours daily. It adds freshness in your environment. <button onclick="cart()">Add to Cart</button></span></p>
+					<p onclick="myFunction4()" id="myBtn4" style="cursor: pointer;">More</p>
+				</div>
+
+				<!--Second column-->
+				<div class="column-3">
+					<img src="images/new4.jpg" alt="first featured product">
+					<h4>Apricot Bonsai</h4>
+					<h3>Rs 999</h3>
+					<p>Apricot Bonsai produce stunning flowers and also<span id="dots5">...</span><span id="more5"> produce edible fruits in the fall. <button onclick="cart()">Add to Cart</button></span></p>
+					<p onclick="myFunction5()" id="myBtn5" style="cursor: pointer;">More</p>
+				</div>
+
+				<!--Third column-->
+				<div class="column-3">
+					<img src="images/featured3.jpg" alt="first featured product">
+					<h4>Banyan Bonsai Tree</h4>
+					<h3>Rs 32000</h3>
+					<p>Banyan Bonsai trees are generally kept outdoors<span id="dots6">...</span><span id="more6"> as they attract worms and insects. So keep it near temples. <button onclick="cart()">Add to Cart</button></span></p>
+					<p onclick="myFunction6()" id="myBtn6" style="cursor: pointer;">More</p>
+				</div>
+
+				<!--Fourth column-->
+				<div class="column-3">
+					<img src="images/featured4.jpg" alt="first featured product">
+					<h4>Chinese Orange Plant</h4>
+					<h3>Rs 99</h3>
+					<p>Chinese Orange Plant is also called mandarin or mandarine<span id="dots7">...</span><span id="more7"> which has fruits that are usually eaten plain or in salads. <button onclick="cart()">Add to Cart</button></span></p>
+					<p onclick="myFunction7()" id="myBtn7" style="cursor: pointer;">More</p>
+			
+				</div>
+			</div>
+		</div>
+
+		<!--Footer tag-->
+		<div class="footer">
+			<a href="aboutus.html"><h4>About Us</h4></a>
+			<marquee><p>@copyright BonsaiNation 2023- All Right Reserved.</p></marquee>
+		</div>
+
+		
+		<script>
+			/*Inbox*/
+			function inbox()
+			{
+				alert("Nothing at the moment. Check again later");
+			}
+
+			/*This function is triggered when add to cart button is clicjed*/
+			function cart()
+			{
+				alert("Added to Cart");
+			}
+
+			/*Greeting according to time*/
+			const time = new Date().getHours();
+			let greeting;
+			if (time < 10) 
+			{
+				greeting = "Good Morning!";
+			}
+			
+			else if (time < 20) 
+			{
+				greeting = "Good Day!";
+			} 
+				
+			else
+			{
+				greeting = "Good evening!";
+			}
+			document.getElementById("greet").innerHTML = greeting;
+
+			/*Read more for first product*/
+			function myFunction() 
+			{
+				var dots = document.getElementById("dots");
+				var moreText = document.getElementById("more");
+				var btnText = document.getElementById("myBtn");
+
+				if (dots.style.display === "none") 
+				{
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more"; 
+					moreText.style.display = "none";
+				} 
+				
+				else
+				{
+					dots.style.display = "none";
+					btnText.innerHTML = "Read less"; 
+					moreText.style.display = "inline";
+				}
+
+			}
+
+			/*Read more for second product*/
+			function myFunction1() 
+			{
+				var dots = document.getElementById("dots1");
+				var moreText = document.getElementById("more1");
+				var btnText = document.getElementById("myBtn1");
+
+				if (dots.style.display === "none") 
+				{
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more"; 
+					moreText.style.display = "none";
+				} 
+				
+				else
+				{
+					dots.style.display = "none";
+					btnText.innerHTML = "Read less"; 
+					moreText.style.display = "inline";
+				}
+			}
+
+			/*Read more for third product*/
+			function myFunction2() 
+			{
+				var dots = document.getElementById("dots2");
+				var moreText = document.getElementById("more2");
+				var btnText = document.getElementById("myBtn2");
+
+				if (dots.style.display === "none") 
+				{
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more"; 
+					moreText.style.display = "none";
+				} 
+				else
+				{
+					dots.style.display = "none";
+					btnText.innerHTML = "Read less"; 
+					moreText.style.display = "inline";
+				}
+
+			}
+
+			/*Read more for fourth product*/
+			function myFunction3() 
+			{
+				var dots = document.getElementById("dots3");
+				var moreText = document.getElementById("more3");
+				var btnText = document.getElementById("myBtn3");
+
+				if (dots.style.display === "none") 
+				{
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more"; 
+					moreText.style.display = "none";
+				} 
+				
+				else
+				{
+					dots.style.display = "none";
+					btnText.innerHTML = "Read less"; 
+					moreText.style.display = "inline";
+				}
+
+			}
+
+			/*Read more for fifth product*/
+			function myFunction4() 
+			{
+				var dots = document.getElementById("dots4");
+				var moreText = document.getElementById("more4");
+				var btnText = document.getElementById("myBtn4");
+
+				if (dots.style.display === "none") 
+				{
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more"; 
+					moreText.style.display = "none";
+				} 
+				
+				else
+				{
+					dots.style.display = "none";
+					btnText.innerHTML = "Read less"; 
+					moreText.style.display = "inline";
+				}
+
+			}
+
+			/*Read more for sixth product*/
+			function myFunction5() 
+			{
+				var dots = document.getElementById("dots5");
+				var moreText = document.getElementById("more5");
+				var btnText = document.getElementById("myBtn5");
+
+				if (dots.style.display === "none") 
+				{
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more"; 
+					moreText.style.display = "none";
+				} 
+					
+				else
+				{
+					dots.style.display = "none";
+					btnText.innerHTML = "Read less"; 
+					moreText.style.display = "inline";
+				}
+
+			}
+
+			/*Read more for seventh product*/	
+			function myFunction6() 
+			{
+				var dots = document.getElementById("dots6");
+				var moreText = document.getElementById("more6");
+				var btnText = document.getElementById("myBtn6");
+
+				if (dots.style.display === "none") 
+				{
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more"; 
+					moreText.style.display = "none";
+				} 
+					
+				else
+				{
+					dots.style.display = "none";
+					btnText.innerHTML = "Read less"; 
+					moreText.style.display = "inline";
+				}
+
+			}
+
+			/*Read more for eighth product*/
+			function myFunction7() 
+			{
+				var dots = document.getElementById("dots7");
+				var moreText = document.getElementById("more7");
+				var btnText = document.getElementById("myBtn7");
+
+				if (dots.style.display === "none") 
+				{
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more"; 
+					moreText.style.display = "none";
+				} 
+					
+				else
+				{
+					dots.style.display = "none";
+					btnText.innerHTML = "Read less"; 
+					moreText.style.display = "inline";
+				}
+
+			}
+
+		</script>
+	</body>
+</html>
